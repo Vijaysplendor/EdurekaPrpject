@@ -96,12 +96,12 @@
 			<pathelement location="${project.3rdpartylibdir}/junit-4.11.jar"/>
 	</path>
 
-   <echo message="****************************************************************************"/>
+   <echo message="***************************************************************************"/>
    <echo message="Start the build for: ${ant.project.name} "/>
    <echo message="Base Dir: ${build.basesrcdir} ${actualbuildtype}"/> 
    <mkdir dir="${project.3rdpartylibdir}"/>
    <echo message="PMD Libraries installed in: ${pmd.installpath}"/>
-   <echo message="****************************************************************************"/>
+   <echo message="***************************************************************************"/>
    <echo message="Skip Test? ${maven.test.skip}"/>
 
 		
