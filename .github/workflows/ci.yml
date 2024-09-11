@@ -1,0 +1,31 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v3
+  
+  - name: Set Up JDK
+    uses: actions/setup-java@v3
+    with:
+      java-version: '17'
+      distribution: 'adopt-openjdk'
+
+  - name: Build with maven
+    run: mvn clean install
+
+  - name: Run Test
+    run: mvn test
+
+  - name: package application
+    run: mvn package
